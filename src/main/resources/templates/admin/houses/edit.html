@@ -82,6 +82,17 @@
                   </div>
                 </div>
 
+                <!-- 定員入力 -->
+                <div class="form-group row mb-3">
+                  <div class="col-md-4">
+                    <label for="capacity" class="col-form-label text-md-left fw-bold">定員（単位：人）</label>
+                  </div>
+                  <div class="col-md-8">
+                    <div th:if="${#fields.hasErrors('capacity')}" class="text-danger small mb-2" th:errors="*{capacity}"></div>
+                    <input type="number" class="form-control" th:field="*{capacity}">
+                  </div>
+                </div>
+                
                 <!-- 住所入力 -->
                 <div class="form-group row mb-3">
                   <div class="col-md-4">
